@@ -19,17 +19,17 @@
       $Nombre = $_SESSION['Nombre'];
       $Usuario = $_SESSION['Usuario'];
 
-      echo "<br> Welcome, $Usuario";
+      echo "<br> Bienvenido  $Usuario";
       echo "<br> Tu nombre es: $Nombre";
       echo "<br> Tu DNI es: $dni";
       echo "<br> Tu correo es: $email";
       echo "<br> Tu direccion es: $Direccion";
 
-      echo "<br>You are Successfully Logged In";
-      echo "<br><a href='logout.php'>Logout</a>";
+      echo "<br>Usted ingreso la sesión correctamente";
+      echo "<br><a href='logout.php'>Cerrar Sesión</a>";
     } else {
-      echo "<h1>Please Login or SignUp</h1>";
-      echo "<a href='login.php'>Login</a> or <a href='signup.php'>SignUp</a>";
+      echo "<h1>Porfavor Inicia sesión o Registrate</h1>";
+      echo "<a href='login.php'>Iniciar sesión</a> o <a href='signup.php'>Registrar Usuario</a>";
     }
     ?>
   </body>

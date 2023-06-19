@@ -48,12 +48,12 @@ $conexion->close();
       <p> <?= $message ?></p>
     <?php endif; ?>
 
-    <h1>Login</h1>
-    <span>or <a href="signup.php">SignUp</a></span>
+    <h1>Iniciar sesión</h1>
+    <span>o <a href="signup.php">Registrar Usuario</a></span>
 
     <form action="login.php" method="POST">
-      <input name="email" type="text" placeholder="Enter your email">
-      <input name="password" type="password" placeholder="Enter your Password">
+      <input name="email" type="text" placeholder="Ingrese su email">
+      <input name="password" type="password" placeholder="Ingrese su contraseña">
       <input type="submit" value="Submit">
     </form>
   </body>

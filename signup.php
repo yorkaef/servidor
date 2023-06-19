@@ -85,39 +85,40 @@ $conexion->close();
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
+
   <body>
     <?php require 'partials/header.php' ?>
 
-    <h1>SignUp</h1>
-    <span>or <a href="login.php">Login</a></span>
+    <h1>Registrar Usuario</h1>
+    <span>o <a href="login.php">Iniciar sesión</a></span>
 
     <form action="signup.php" method="POST">
-      <input name="dni" type="text" placeholder="Enter your DNI"  pattern="^\d{8}$" title="El dni solo debe contener 8 numeros" required>
+      <input name="dni" type="text" placeholder="Ingrese su DNI"  pattern="^\d{8}$" title="El dni solo debe contener 8 numeros" required>
       <?php if (!empty($dniError)): ?>
         <p><?php echo $dniError; ?></p>
       <?php endif; ?>
 
-      <input name="nombre" type="text" placeholder="Enter your Name" required>
+      <input name="nombre" type="text" placeholder="Ingrese su nombre completo"  title="Ingrese su nombre y apellidos" required>
 
-      <input name="correo" type="text" placeholder="Enter your email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" title="La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un carácter especial o un número" required>
+      <input name="correo" type="text" placeholder="Ingrese su email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" title="El email debe contener una extension @gmail.com" required>
       <?php if (!empty($correoError)): ?>
         <p><?php echo $correoError; ?></p>
       <?php endif; ?>
 
 
-      <input name="direccion" type="text" placeholder="Enter your Address" required>
+      <input name="direccion" type="text" placeholder="Ingrese su direccion" title="Ingrese su dirección de vivienda" required>
 
-      <input name="usuario" type="text" placeholder="Enter your Username" required>
+      <input name="usuario" type="text" placeholder="Ingrese su nombre de usuario" title="Ingrese su nombre de usuario" required>
       <?php if (!empty($usuarioError)): ?>
         <p><?php echo $usuarioError; ?></p>
       <?php endif; ?>
 
-     <input name="password" type="password" placeholder="Enter your Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).*$" title="La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un carácter especial o un número" required>
+     <input name="password" type="password" placeholder="Ingrese su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).*$" title="La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un carácter especial o un número" required>
       <?php if (!empty($passwordError)): ?>
         <p><?php echo $passwordError; ?></p>
       <?php endif; ?>
 
-      <input name="confirm_password" type="password" placeholder="Confirm Password" required>
+      <input name="confirm_password" type="password" placeholder="Confirma su contraseña" title="Reptia su contraseña"required>
       <?php if (!empty($confirmPasswordError)): ?>
         <p><?php echo $confirmPasswordError; ?></p>
       <?php endif; ?>
